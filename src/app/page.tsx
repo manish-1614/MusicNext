@@ -1,29 +1,26 @@
-import Image from "next/image";
+import { cn } from "@/lib/utils";
+import React from "react";
+import { Spotlight } from "@/components/ui/Spotlight";
+import HeroSection from "@/components/HeroSection";
+import FeaturedCourses from "@/components/FeaturedCourses";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import TestimonialCards from "@/components/TestimonialCards";
+import UpcomingWebinars from "@/components/UpcomingWebinars";
+import Instructors from "@/components/Instructors";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-roboto-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-roboto-mono)]">
-          <li className="mb-2">This is a new Next JS app template by <strong>Manish</strong></li>
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-      </main>
+    <div className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
+      
+        <HeroSection/>
+        <FeaturedCourses/>
+        <WhyChooseUs />
+        <TestimonialCards/>
+        <UpcomingWebinars/>
+        <Instructors />
+        <Footer/>
+        
     </div>
   );
 }
